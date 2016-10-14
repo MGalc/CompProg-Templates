@@ -1,0 +1,32 @@
+#!/bin/bash
+
+while true; do
+    read -p "Recreate template files? " yn
+    case $yn in
+        [Yy]* ) 
+        {
+            cp ./template ./a.cpp;
+            cp ./template ./b.cpp;
+            cp ./template ./c.cpp;
+            cp ./template ./d.cpp;
+            cp ./template ./e.cpp;
+            cp ./template ./f.cpp;
+            rm ./a;
+            rm ./b;
+            rm ./c;
+            rm ./d;
+            rm ./e;
+            rm ./f;
+            chmod 700 *.cpp;
+            rm ./out;
+            rm ./in;
+            touch in;
+            touch out;
+        } &> /dev/null
+        echo "Files recreated."
+        break;;
+    [Nn]* ) exit;;
+    * ) echo "Please answer yes or no.";;
+esac
+
+done
