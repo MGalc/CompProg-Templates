@@ -1,13 +1,29 @@
+package Libs;
+
 import java.io.*;
 import java.util.*;
 
-static class InputReader {
+public class InputReader {
     public BufferedReader reader;
     public StringTokenizer tokenizer;
 
     public InputReader(InputStream stream) {
         reader = new BufferedReader(new InputStreamReader(stream), 32768);
         tokenizer = null;
+    }
+
+    public boolean hasMore() {
+        while (tokenizer == null || !tokenizer.hasMoreTokens()) {
+            try {
+                String s = reader.readLine();
+                if (s == null)
+                    return false;
+                tokenizer = new StringTokenizer(s);
+            } catch (IOException e) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public String next() {
@@ -24,3 +40,6 @@ static class InputReader {
     public int nextInt() {
         return Integer.parseInt(next());
     }
+
+    public long nextLong() { return Long.parseLong((next())); }
+}
