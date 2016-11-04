@@ -17,7 +17,7 @@ while true; do
             rm ./d;
             rm ./e;
             rm ./f;
-            chmod 700 *.cpp;
+            chmod 777 *.cpp;
             rm ./out;
             rm ./in;
             touch in;
