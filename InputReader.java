@@ -29,7 +29,7 @@ public class InputReader {
     public String nextLine() {
         while (tokenizer == null || !tokenizer.hasMoreTokens()) {
             try {
-                tokenizer = new StringTokenizer(reader.readLine());
+                return reader.readLine();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
