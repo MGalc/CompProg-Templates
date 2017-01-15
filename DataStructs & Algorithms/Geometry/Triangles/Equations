@@ -1,0 +1,55 @@
+Area of triangle
+    area = 0.5 * base * height
+
+Size of triangle's incenter
+    incenter = perimeter / 2
+
+https://en.wikibooks.org/wiki/Trigonometry/Proof:_Heron's_Formula
+Heron's Formula (Area of triangle)
+    triangle area = squareroot(s * (s - a) * (s - b) * (s - c))
+        Where
+        a, b, c = Triangle side length
+        s = semi-perimeter
+
+http://mathworld.wolfram.com/Incenter.html
+http://www.mathopenref.com/coordincenter.html
+Coordinates of the incenter
+    xCoord = (BC*xa + AC*xb + AB*xc)/P 
+    yCoord = (BC*ya + AC*yb + AB*yc)/P
+        Where
+        AB, AC, BC = Triangle side Length
+        P = perimeter (a+b+c), 
+        xa, xb, xc = x coordinate of the vertex
+        ya, yb, yc = y coordinate of the vertex
+
+http://mathworld.wolfram.com/Incircle.html
+Radius of incircle
+    Radius = Area / Semi-perimeter
+
+http://mathworld.wolfram.com/Incircle.html
+Area of triangle
+    Area = Semi-perimeter * Radius
+
+Circumcenter radius
+    radius = (AB * AC * BC) / (4 * area)
+
+Triangle check
+To check if three sides can form a triangle,
+   a + b > c && a + c > b && b + c > a
+or if sorted
+    a + b > c
+
+https://www.mathsisfun.com/algebra/trig-cosine-law.html
+Cosine formula
+To get the third side:
+    C^2 = A^2 + B^2 - 2*A*B*cos(theta)
+To get the angle theta:
+    theta = acos((A^2 + B^2 - C^2)/(2 * A * B))
+        Where
+        theta = angle between sides A and B
+
+Law of sines
+    A/sin(oppA) = B/sin(oppB) = C/sin(oppC) = 2 * circumcircleRadius
+
+Pythagoran Theorem
+    A^2 + B^2 = C^2

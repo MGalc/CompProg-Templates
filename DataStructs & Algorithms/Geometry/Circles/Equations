@@ -1,0 +1,49 @@
+A circle is given by:
+    r^2 = x^2 + y^2
+    r^2 = (x - a)^2 + (y - b)^2
+        Where
+        a, b are the center of the circle
+        r is the radius
+
+An eclipse is given by:
+    (x^2 / n^2) + (y^2 / m^2) = 1
+If not centered at the origin:
+    ((x-a)^2 / n^2) + ((y-b)^2 / m^2) = 1
+        Where
+        a, b are the center of the ellipse
+        n is the radius along the x-axis
+        m is the radius along the y-axis
+
+PI 
+    = acos(-1.0) or acos(0.0) * 2
+
+Ellipse area
+    = PI * A * B
+        Where 
+        A = x-axis radius
+        Y = y-axis radius
+
+Circle area 
+    = PI * r^2
+
+Circle circumference 
+    = PI * diameter = 2 * PI * r
+
+Arc length 
+    = circumference * (angle / 360)
+
+Chord length 
+    = sqrt(2 * r^2 * (1 - cos(angle)))
+    = 2 * r * sin(angle / 2)
+
+Sector area
+    = circleArea * (angle / 360)
+
+Segment (Between chord and arc)
+    = sectorArea - triangleArea(r, r, chordLength)
+
+Convert to Radians from Degrees
+    Radians = Degrees * (PI / 180.0)
+
+Convert to Degrees from Radians
+    Degrees = Radians * (180.0 / PI)

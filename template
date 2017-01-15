@@ -17,6 +17,7 @@ using namespace std;
 #define popc(x) __builtin_popcount(x)
 #define MOD 1000007
 #define INF 1e9
+#define EPS 1e-9
 
 typedef stringstream ss;
 typedef pair<int, int> pii;
@@ -27,10 +28,6 @@ typedef vector<double> vd;
 typedef vector<vector<int> > vii;
 typedef long long ll;
 typedef long double ld;
-typedef complex<double> point;
-typedef pair<point, point> segment;
-typedef pair<double, point> circle;
-typedef vector<point> polygon;
 
 const double PI = 2 * acos(0);
 
