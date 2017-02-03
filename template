@@ -11,10 +11,8 @@ using namespace std;
 #define For(it,c) for(__typeof(c.begin()) it=c.begin();it!=c.end();++it)
 #define mem(a,b) memset(a,b,sizeof(a))
 #define mp make_pair
-#define dot(a,b) ((conj(a)*(b)).X)
-#define X real()
-#define Y imag()
-#define popc(x) __builtin_popcount(x)
+#define popc32(x) __builtin_popcount(x)
+#define popc64(x) __builtin_popcountll(x)
 #define MOD 1000007
 #define INF 1e9
 #define EPS 1e-9
@@ -29,7 +27,7 @@ typedef vector<vector<int> > vii;
 typedef long long ll;
 typedef long double ld;
 
-const double PI = 2 * acos(0);
+static const double PI = 2 * acos(0);
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(0);
