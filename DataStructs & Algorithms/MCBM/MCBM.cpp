@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int N;
 vector<int> LHS;
 vector<int> RHS;
 vector<vector<int>> bigraph;
@@ -30,19 +29,22 @@ int match(int left) {
     return 0;
 }
 
+// MAKE SURE TO ASSIGN LHS & RHS
 int MCBM(int maxdist) {
-    bigraph.assign(N, vector<int>());
-    parents.assign(N, -1);
+    int totNodes = LHS.size() + RHS.size();
+    bigraph.assign(totNodes, vector<int>());
+    parents.assign(totNodes, -1);
 
     for (int i = 0; i < LHS.size(); i++) {
         for (int j = 0; j < RHS.size(); j++) {
+            // Add if statement here
             bigraph[i].push_back(LHS.size()+j);
         }
     }
 
     int matched = 0;
     for (int i = 0; i < LHS.size(); i++) {
-        visited.assign(N, false);
+        visited.assign(totNodes, false);
         matched += match(i);
     }
 
