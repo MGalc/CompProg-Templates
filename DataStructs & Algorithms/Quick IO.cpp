@@ -12,6 +12,19 @@ void scanint(int &x)
     for (;(c<48 || c>57);c = gc());
     for (;c>47 && c<58;c = gc()) {x = (x<<1) + (x<<3) + c - 48;}
 }
+void scannegint(int &x)
+{
+    bool neg = false;
+	int c=gc();
+	x = 0;
+    for (;(c!=45 && (c<48 || c>57));c = gc());
+    if (c == '-') {
+        neg = true;
+        c = gc();
+    }
+    for (;c>47 && c<58;c = gc()) {x = (x<<1) + (x<<3) + c - 48;}
+    if (neg) x = (x^0xFFFFFFFF)+1;
+}
 void scanint(long long int &x)
 {
 	int c=gc();

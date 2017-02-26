@@ -1,3 +1,17 @@
+struct point {
+    double x, y;
+    point() {
+        x = 0;
+        y = 0;
+    }
+    point(double xx, double yy) : x(xx), y(yy) { }
+
+    bool operator==(const point b) const {
+        return (fabs(x - b.x) < EPS && fabs(y - b.y) < EPS);
+    }
+};
+
+
 struct line { double a, b, c; };
 
 line pointsToLine(point p1, point p2) {

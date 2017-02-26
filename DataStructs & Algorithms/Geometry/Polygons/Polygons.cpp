@@ -12,11 +12,11 @@ double area(const vector<point> &P) {
 
 // Returns true if all consecutive vertices of P are convex.
 bool isConvex(const vector<point> &P) {
-    int sz = (int)P.size();
-    if (sz <= 3) return false;
+    int size = (int)P.size();
+    if (size <= 3) return false;
     bool isLeft = ccw(P[0], P[1], P[2]);
-    for (int i = 1; i < sz-1; i++)
-        if (ccw(P[i], P[i+1], P[(i+2) == sz ? 1 : i+2]) != isLeft)
+    for (int i = 1; i < size-1; i++)
+        if (ccw(P[i], P[i+1], P[(i+2) == size ? 1 : i+2]) != isLeft)
             return false;
     return true; 
 }
@@ -70,6 +70,7 @@ bool angleCmp(point a, point b) {
     return (atan2(d1y, d1x) - atan2(d2y, d2x)) < 0; 
 }
 
+// Convect Hull
 vector<point> CH(vector<point> P) {
     int i, j, n = (int)P.size();
     if (n <= 3) {

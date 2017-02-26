@@ -1,0 +1,7 @@
+Moser's Circle:
+// https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1154
+http://mathworld.wolfram.com/CircleDivisionbyChords.html
+Place points on the circumference of a circle.
+When you have N points placed, what is the largest amount of areas you can create?
+An area is just a piece of the circle enclosed by lines and the circumference.
+The solution is just the equation: Nchoose4 + Nchoose2 + 1

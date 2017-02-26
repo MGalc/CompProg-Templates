@@ -1,0 +1,6 @@
+There's a simple equation to count the amount of spanning trees there are within a bipartite graph.
+L = Number of elements on the left side of the bipartite graph
+R = Number of elements on the right side of the bipartite graph
+# of spanning trees = L^(R-1) * R^(L-1)
+
+This will generally need to be implemented within Java's BigInteger as the values get large quite quickly.
