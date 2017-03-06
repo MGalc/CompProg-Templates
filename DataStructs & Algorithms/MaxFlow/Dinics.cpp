@@ -7,8 +7,8 @@ typedef vector<vi> vii;
 
 vii flowvals; // Stores the current values of flows
 vii edges; // Stores the edges
-int T;
 int S;
+int T;
 int wantedFlow; // Optional value if we are making sure our flow is atleast this number
 vi bfsindx;
 int maxsize;
@@ -31,7 +31,12 @@ int dinicBFS() {
     return bfsindx[T]; 
 }
 
+vector<bool> visited;
 int dinicDFS(int loc, int availFlow) {
+    if (visited[loc]) 
+        return 0;
+    visited[loc] = true;
+
     if (loc == T) {
         return availFlow;
     }
@@ -56,6 +61,7 @@ int dinicDFS(int loc, int availFlow) {
 bool dinics() {
     int flowed = 0;
     while (dinicBFS() > 0) {
+        visited.assign(maxsize, false);
         flowed += dinicDFS(S, INF);
     }
 
