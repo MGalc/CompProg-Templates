@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script recreates the competitive programming files within a folder.
+# This allows for quick creation of a competitive programming environment.
+
 while true; do
     read -p "Recreate template files? " yn
     case $yn in
